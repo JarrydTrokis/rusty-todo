@@ -53,8 +53,8 @@ Before you begin, ensure you have met the following requirements:
    Open your terminal and clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/todo_cli.git
-   cd todo_cli
+   git clone https://github.com/yourusername/rusty_todo.git
+   cd rusty_todo
    ```
 
 2. **Install Dependencies:**
@@ -69,7 +69,7 @@ Before you begin, ensure you have met the following requirements:
 
    ```toml
    [package]
-   name = "todo_cli"
+   name = "rusty_todo"
    version = "0.1.0"
    edition = "2021"
 
@@ -87,7 +87,7 @@ Before you begin, ensure you have met the following requirements:
    Ensure you're in the root directory of the project:
 
    ```bash
-   cd todo_cli
+   cd rusty_todo
    ```
 
 2. **Build the Application:**
@@ -98,7 +98,7 @@ Before you begin, ensure you have met the following requirements:
    cargo build --release
    ```
 
-   The compiled binary will be located at `target/release/todo_cli`.
+   The compiled binary will be located at `target/release/rusty_todo`.
 
 3. **(Optional) Install the Application Globally:**
 
@@ -112,20 +112,20 @@ Before you begin, ensure you have met the following requirements:
 
 ## Usage
 
-Once built or installed, you can use the `todo_cli` application to manage your todos. Below are the available commands and usage examples.
+Once built or installed, you can use the `rusty_todo` application to manage your todos. Below are the available commands and usage examples.
 
 ### Add a Todo
 
 Add a new todo by providing a title and description.
 
 ```bash
-todo_cli add --title "Buy Groceries" --description "Milk, Eggs, Bread, and Butter"
+rusty_todo add --title "Buy Groceries" --description "Milk, Eggs, Bread, and Butter"
 ```
 
 **Short Flags:**
 
 ```bash
-todo_cli add -t "Read Book" -d "Finish reading 'The Rust Programming Language'"
+rusty_todo add -t "Read Book" -d "Finish reading 'The Rust Programming Language'"
 ```
 
 **Output:**
@@ -139,13 +139,13 @@ Added todo with ID 1
 Remove an existing todo by specifying its unique ID.
 
 ```bash
-todo_cli remove --id 1
+rusty_todo remove --id 1
 ```
 
 **Short Flag:**
 
 ```bash
-todo_cli remove -i 2
+rusty_todo remove -i 2
 ```
 
 **Output:**
@@ -165,13 +165,13 @@ No todo found with ID 3.
 Update the status of a todo to indicate it has been completed.
 
 ```bash
-todo_cli complete --id 1
+rusty_todo complete --id 1
 ```
 
 **Short Flag:**
 
 ```bash
-todo_cli complete -i 2
+rusty_todo complete -i 2
 ```
 
 **Output:**
@@ -197,7 +197,7 @@ No todo found with ID 2.
 Display all existing todos with their IDs, titles, descriptions, and statuses.
 
 ```bash
-todo_cli list
+rusty_todo list
 ```
 
 **Output:**
@@ -218,7 +218,7 @@ No todos found.
 To view help information and see available commands and options:
 
 ```bash
-todo_cli --help
+rusty_todo --help
 ```
 
 **Sample Output:**
@@ -227,7 +227,7 @@ todo_cli --help
 Simple CLI Todo Application
 
 USAGE:
-    todo_cli <SUBCOMMAND>
+    rusty_todo <SUBCOMMAND>
 
 OPTIONS:
     -h, --help       Print help information
@@ -246,7 +246,7 @@ SUBCOMMANDS:
 Here's an overview of the project's structure:
 
 ```
-todo_cli/
+rusty_todo/
 ├── Cargo.toml
 ├── README.md
 └── src
